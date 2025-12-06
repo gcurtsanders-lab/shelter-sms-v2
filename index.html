@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelter Radar – Tonight's Safe Spots (Atlanta)</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #f5f5f5; color: #333; margin: 0; padding: 20px; }
+    h1 { color: #d32f2f; font-size: 24px; margin-bottom: 20px; }
+    #output p { margin: 10px 0; font-size: 18px; background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    img { border-radius: 50%; width: 150px; margin: 20px auto; display: block; }
+  </style>
+</head>
+<body>
+  <img src="https://i.imgur.com/PLACEHOLDER_PANDA.png" alt="Ollie's Panda Guide"> <!-- replace with real imgur link -->
+  <h1>🏠 Shelter Radar – Tonight's Safe Spots (Atlanta)</h1>
+  <div id="output"></div>
+  <script>
+    const shelters = [
+      { name: "Gateway Center", addr: "260 Peachtree St NW, Atlanta, GA 30303", close: "8 PM (intake closes)" },
+      { name: "Atlanta Mission - Men's Shelter", addr: "235 Alexander St SE, Atlanta, GA 30312", close: "7 PM" },
+      { name: "Atlanta Mission - Women's Shelter", addr: "160 Ralph McGill Blvd NE, Atlanta, GA 30308", close: "6 PM" },
+      { name: "Salvation Army Red Shield Lodge", addr: "116 Decatur St SE, Atlanta, GA 30303", close: "10 PM (men/women/families)" },
+      { name: "Our House Family Shelter", addr: "1710 Joseph E Lowery Blvd NW, Atlanta, GA 30318", close: "5 PM (families only)" },
+      { name: "Hope Atlanta Emergency Shelter", addr: "347 John Wesley Dobbs Ave NE, Atlanta, GA 30312", close: "9 PM (hotel/motel for families)" },
+      { name: "Union Mission Women's Shelter", addr: "304 Luckie St NW, Atlanta, GA 30313", close: "8 PM" },
+      { name: "Atlanta Day Shelter for Women & Children", addr: "153 Luckie St NW, Atlanta, GA 30303", close: "4 PM (day use)" },
+      { name: "MUST Ministries Shelter", addr: "675 Seminole Ave NE, Atlanta, GA 30307", close: "9 PM" },
+      { name: "Lost-N-Found Youth Shelter", addr: "1034 Ridge Ave SE, Atlanta, GA 30315", close: "10 PM (youth only)" }
+    ];
+
+    const output = document.getElementById("output");
+    shelters.forEach(s => {
+      const p = document.createElement("p");
+      p.innerHTML = `<strong>→ ${s.name}</strong><br>${s.addr}<br>Open till <strong>${s.close}</strong>`;
+      output.appendChild(p);
+    });
+  </script>
+</body>
+</html>
