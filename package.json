@@ -1,0 +1,9 @@
+{
+  "name": "shelter-sms-v2",
+  "version": "1.0.0",
+  "main": "api/sms.js",
+  "type": "module",
+  "dependencies": {
+    "twilio": "^4.20.0"
+  }
+}
